@@ -1,0 +1,11 @@
+.\objects\icm406xxselftest.o: examples\STnucleo_test\Icm406xxSelfTest.c
+.\objects\icm406xxselftest.o: examples\STnucleo_test\Icm406xxSelfTest.h
+.\objects\icm406xxselftest.o: examples\STnucleo_test\InvExport.h
+.\objects\icm406xxselftest.o: examples\STnucleo_test\Icm406xxDefs.h
+.\objects\icm406xxselftest.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\icm406xxselftest.o: examples\STnucleo_test\Icm406xxExtFunc.h
+.\objects\icm406xxselftest.o: examples\STnucleo_test\Icm406xxTransport.h
+.\objects\icm406xxselftest.o: examples\STnucleo_test\Icm406xxDriver_HL.h
+.\objects\icm406xxselftest.o: examples\STnucleo_test\InvError.h
+.\objects\icm406xxselftest.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\icm406xxselftest.o: .\board-hal\delay.h

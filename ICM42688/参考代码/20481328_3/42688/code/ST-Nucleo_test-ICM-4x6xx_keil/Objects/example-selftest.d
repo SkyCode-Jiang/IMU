@@ -1,0 +1,13 @@
+.\objects\example-selftest.o: examples\STnucleo_test\example-selftest.c
+.\objects\example-selftest.o: examples\STnucleo_test\example-selftest.h
+.\objects\example-selftest.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\example-selftest.o: examples\STnucleo_test\Icm406xxTransport.h
+.\objects\example-selftest.o: examples\STnucleo_test\Icm406xxDefs.h
+.\objects\example-selftest.o: examples\STnucleo_test\Icm406xxDriver_HL.h
+.\objects\example-selftest.o: examples\STnucleo_test\InvError.h
+.\objects\example-selftest.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\example-selftest.o: examples\STnucleo_test\Icm406xxSelfTest.h
+.\objects\example-selftest.o: examples\STnucleo_test\InvExport.h
+.\objects\example-selftest.o: examples\STnucleo_test\Message.h
+.\objects\example-selftest.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\example-selftest.o: examples\STnucleo_test\common.h

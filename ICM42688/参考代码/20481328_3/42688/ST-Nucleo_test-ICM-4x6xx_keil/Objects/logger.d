@@ -1,0 +1,10 @@
+.\objects\logger.o: Invn\EmbUtils\Logger.c
+.\objects\logger.o: Invn\EmbUtils\Logger.h
+.\objects\logger.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\logger.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\logger.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\logger.o: F:\INDEMIND\SOFT\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\logger.o: Invn\EmbUtils\InvFormat.h
+.\objects\logger.o: Invn\EmbUtils\InvAssert.h
+.\objects\logger.o: Invn\EmbUtils\RingByteBuffer.h
+.\objects\logger.o: ..\ST-Nucleo_test-ICM-4x6xx_keil\Invn/InvBool.h
