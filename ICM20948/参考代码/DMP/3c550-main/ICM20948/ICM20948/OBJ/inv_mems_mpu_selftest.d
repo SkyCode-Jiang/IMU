@@ -1,0 +1,15 @@
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_mpu_selftest.c
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_mpu_selftest.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_defines.h
+..\obj\inv_mems_mpu_selftest.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\inv_mems_mpu_selftest.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\common\mltypes.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_defines.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\common\inv_mems_drv_hook.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\invn\common\int_types.h
+..\obj\inv_mems_mpu_selftest.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\dmp3a\dmp3Driver.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_base_driver.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\common\inv_mems_drv_hook.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_transport.h
+..\obj\inv_mems_mpu_selftest.o: ..\ICM_20948\Mems\driver\inv_mems_slave_compass.h

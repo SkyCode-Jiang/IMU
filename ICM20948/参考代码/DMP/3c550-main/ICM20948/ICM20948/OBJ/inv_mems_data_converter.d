@@ -1,0 +1,10 @@
+..\obj\inv_mems_data_converter.o: ..\ICM_20948\Mems\driver\inv_mems_data_converter.c
+..\obj\inv_mems_data_converter.o: ..\ICM_20948\Mems\driver\inv_mems_data_converter.h
+..\obj\inv_mems_data_converter.o: ..\ICM_20948\Mems\invn\common\ml_math_func.h
+..\obj\inv_mems_data_converter.o: ..\ICM_20948\Mems\invn\common\invn_types.h
+..\obj\inv_mems_data_converter.o: ..\ICM_20948\Mems\invn\common\int_types.h
+..\obj\inv_mems_data_converter.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\inv_mems_data_converter.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+..\obj\inv_mems_data_converter.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\inv_mems_data_converter.o: ..\ICM_20948\Mems\invn\common\mlmath.h
+..\obj\inv_mems_data_converter.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

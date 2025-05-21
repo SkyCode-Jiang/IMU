@@ -1,0 +1,14 @@
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\dmp3a\dmp3Default_20648.c
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\dmp3a\dmp3Driver.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\invn\common\int_types.h
+..\obj\dmp3default_20648.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\dmp3a\dmp3Default_20648.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\common\mltypes.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\driver\inv_mems_defines.h
+..\obj\dmp3default_20648.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\dmp3default_20648.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\common\mltypes.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\common\inv_mems_drv_hook.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\invn\common\invn_types.h
+..\obj\dmp3default_20648.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+..\obj\dmp3default_20648.o: ..\ICM_20948\Mems\dmp3a\dmp3Default_20648.txt
