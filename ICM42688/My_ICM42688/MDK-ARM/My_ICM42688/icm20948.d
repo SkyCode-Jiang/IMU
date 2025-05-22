@@ -1,0 +1,2 @@
+my_icm42688\icm20948.o: ICM20948\icm20948.c
+my_icm42688\icm20948.o: ICM20948\icm20948.h
