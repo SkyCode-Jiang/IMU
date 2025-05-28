@@ -331,7 +331,7 @@
               <MiscControls/>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine/>
-              <IncludePath>../Core/Inc;  ../Drivers/STM32F1xx_HAL_Driver/Inc;  ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;  ../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;   ../Drivers/CMSIS/Include;   ./ICM42688;   ./SendToAanyUp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -385,6 +385,26 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
+              <FileName>icm42688.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ICM42688\icm42688.c</FilePath>
+            </File>
+            <File>
+              <FileName>SendToAanyUp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SendToAanyUp\SendToAanyUp.c</FilePath>
+            </File>
+            <File>
+              <FileName>PoseCalc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SendToAanyUp\PoseCalc.c</FilePath>
+            </File>
+            <File>
+              <FileName>kalman_oneorder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ICM42688\kalman_oneorder.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -415,9 +435,6 @@
               <FilePath>../Core/Src/stm32f1xx_hal_msp.c</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
           <GroupName>Drivers/STM32F1xx_HAL_Driver</GroupName>
@@ -508,6 +525,9 @@
               <FilePath>../Core/Src/system_stm32f1xx.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>

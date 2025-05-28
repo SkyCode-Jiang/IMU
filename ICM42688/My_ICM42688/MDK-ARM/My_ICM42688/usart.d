@@ -28,4 +28,5 @@ my_icm42688\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.
 my_icm42688\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 my_icm42688\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 my_icm42688\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+my_icm42688\usart.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 my_icm42688\usart.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -22,41 +22,65 @@ Dialog DLL:      TCM.DLL V1.14.8.0
  
 <h2>Project:</h2>
 F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\My_ICM42688.uvprojx
-Project File Date:  05/21/2025
+Project File Date:  05/27/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 1 (build 61)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'My_ICM42688'
-compiling icm20948.c...
-ICM20948\icm20948.c(1): warning:  #1-D: last line of file ends without a newline
-  #include "icm20948.h"
-ICM20948\icm20948.c: 1 warning, 0 errors
-compiling stm32f1xx_hal.c...
-compiling stm32f1xx_hal_gpio_ex.c...
-compiling stm32f1xx_it.c...
-compiling gpio.c...
-compiling stm32f1xx_hal_msp.c...
-compiling i2c.c...
 compiling main.c...
-compiling usart.c...
-compiling stm32f1xx_hal_rcc.c...
-compiling stm32f1xx_hal_rcc_ex.c...
-compiling stm32f1xx_hal_i2c.c...
-compiling stm32f1xx_hal_gpio.c...
-compiling stm32f1xx_hal_pwr.c...
-compiling stm32f1xx_hal_cortex.c...
-compiling stm32f1xx_hal_dma.c...
-compiling stm32f1xx_hal_exti.c...
-compiling stm32f1xx_hal_tim.c...
-compiling stm32f1xx_hal_flash_ex.c...
-compiling stm32f1xx_hal_flash.c...
-compiling stm32f1xx_hal_tim_ex.c...
-compiling stm32f1xx_hal_uart.c...
-compiling system_stm32f1xx.c...
+./ICM42688/function.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif
+./ICM42688/icm42688regdata.h(276): warning:  #1-D: last line of file ends without a newline
+  #endif
+./ICM42688/icm42688.h(377): warning:  #1295-D: Deprecated declaration getTapInformation - give arg types
+  void getTapInformation();
+./ICM42688/icm42688.h(386): warning:  #1295-D: Deprecated declaration numberOfTap - give arg types
+  uint8_t numberOfTap();
+./ICM42688/icm42688.h(396): warning:  #1295-D: Deprecated declaration axisOfTap - give arg types
+  uint8_t axisOfTap();
+./ICM42688/icm42688.h(402): warning:  #1295-D: Deprecated declaration wakeOnMotionInit - give arg types
+  void wakeOnMotionInit();
+./ICM42688/icm42688.h(487): warning:  #1295-D: Deprecated declaration startFIFOMode - give arg types
+  void startFIFOMode();
+./ICM42688/icm42688.h(493): warning:  #1295-D: Deprecated declaration sotpFIFOMode - give arg types
+  void sotpFIFOMode();
+./ICM42688/icm42688.h(499): warning:  #1295-D: Deprecated declaration getFIFOData - give arg types
+  void getFIFOData();
+./ICM42688/icm42688.h(541): warning:  #1295-D: Deprecated declaration startTempMeasure - give arg types
+  void startTempMeasure();
+./ICM42688/icm42688.h(549): warning:  #1295-D: Deprecated declaration setFIFODataMode - give arg types
+  void setFIFODataMode();
+./ICM42688/icm42688.h(672): warning:  #1295-D: Deprecated declaration startFIFOMode - give arg types
+  void startFIFOMode();
+./ICM42688/icm42688.h(678): warning:  #1295-D: Deprecated declaration sotpFIFOMode - give arg types
+  void sotpFIFOMode();
+./ICM42688/icm42688.h(684): warning:  #1295-D: Deprecated declaration getFIFOData - give arg types
+  void getFIFOData();
+./ICM42688/icm42688.h(729): warning:  #1295-D: Deprecated declaration getTapInformation - give arg types
+  void getTapInformation();
+./ICM42688/icm42688.h(738): warning:  #1295-D: Deprecated declaration numberOfTap - give arg types
+  uint8_t numberOfTap();
+./ICM42688/icm42688.h(748): warning:  #1295-D: Deprecated declaration axisOfTap - give arg types
+  uint8_t axisOfTap();
+./ICM42688/icm42688.h(755): warning:  #1295-D: Deprecated declaration wakeOnMotionInit - give arg types
+  void wakeOnMotionInit();
+./ICM42688/icm42688.h(789): warning:  #1295-D: Deprecated declaration tiltDetectionInit - give arg types
+  void tiltDetectionInit();
+./ICM42688/icm42688.h(790): warning:  #1295-D: Deprecated declaration setTiltDetection - give arg types
+  void setTiltDetection();
+./ICM42688/icm42688.h(791): warning:  #1295-D: Deprecated declaration enableTILEInterrupt - give arg types
+  void enableTILEInterrupt();
+./SendToAanyUp/SendToAanyUp.h(53): warning:  #1-D: last line of file ends without a newline
+  #endif 
+./SendToAanyUp/PoseCalc.h(49): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c(120): warning:  #177-D: variable "AllData" was declared but never referenced
+  	int16_t AllData[6];
+../Core/Src/main.c: 24 warnings, 0 errors
 linking...
-Program Size: Code=7904 RO-data=292 RW-data=20 ZI-data=1180  
+Program Size: Code=10764 RO-data=292 RW-data=20 ZI-data=1180  
 FromELF: creating hex file...
-"My_ICM42688\My_ICM42688.axf" - 0 Error(s), 1 Warning(s).
+"My_ICM42688\My_ICM42688.axf" - 0 Error(s), 24 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -75,9 +99,9 @@ Package Vendor: ARM
 
    * Component: ARM::CMSIS:CORE:5.4.0
       Include file:  CMSIS\Core\Include\tz_context.h
-      Source file:   CMSIS\Core\Template\ARMv8-M\main_s.c
       Source file:   CMSIS\Core\Template\ARMv8-M\tz_context.c
-Build Time Elapsed:  00:00:05
+      Source file:   CMSIS\Core\Template\ARMv8-M\main_s.c
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

@@ -25,7 +25,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "function.h"
+#include "icm42688.h"
+#include "SendToAanyUp.h"
+#include "PoseCalc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,6 +38,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,7 +49,15 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+extern ICM42688Set User_set;                           //icm42688参数
+//原始数据
+INT16_XYZ ACCInt,GYROInt;
+//AD转换后的浮点数据
+FLOAT_XYZ ACCFloat,GYROFloat;
+float tempData;
 
+FLOAT_ANGLE Att_Angle;                                 //欧拉角
+FLOAT_XYZ 	Acc_filt,Acc_filtold,Gyr_radold,Gyr_filt;	  //滤波后的数据
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,6 +68,44 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+///////////根据设备不同改写//////////////////
+///////SendToUp///////////MCU////////////////
+///////ADChangeACC////////IMU////////////////
+///////ADChangeGYRO///////IMU////////////////
+/////////////////////////////////////////////
+/**
+  *@author       JCLStill
+  *@brief        SendToAanyUp 部通信函数，根据不同设备改写
+  *@param         void
+  *@return        void
+  */
+void SendToUp(uint8_t *data,size_t size)
+{
+	 HAL_UART_Transmit(&huart1,(uint8_t *)data,size,0xff);
+}
+
+/**
+  *@author       JCLStill
+  *@brief        PoseCalc
+  *@param         void
+  *@return        void
+  */
+float ADChangeACC(float Filtdata ) 
+{
+	return Filtdata*User_set._accelRange/1000;
+}
+/**
+  *@author       JCLStill
+  *@brief        PoseCalc 角速度转换为弧度
+  *@param         void
+  *@return        void
+  */
+float ADChangeGYRO(float Filtdata )
+{
+	return Filtdata*User_set._gyroRange*3.1415/180;
+}
+ 
+ 
 
 /* USER CODE END 0 */
 
@@ -66,7 +116,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	uint8_t result;
+	int16_t AllData[6];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -91,6 +142,67 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 	printf("Start init\r\n");
+	
+	result = ICM42688_Readme();
+	if(result == HAL_OK){
+		printf("This is ICM42688\r\n");
+	}else{
+		printf("SomeThings error \r\n");
+		return HAL_ERROR;
+	}
+	
+	////////////ACC GYRO 初始化//////////////////////////////		
+	////////////如果使用APEX APEX会重新初始化某些位///////////////	
+//	setODRAndFSR(/* who= */GYRO,/* ODR= */ODR_1KHZ, /* FSR = */FSR_0);
+//  setODRAndFSR(/* who= */ACCEL,/* ODR= */ODR_1KHZ, /* FSR = */FSR_0);
+//	
+//	startTempMeasure();
+//  startGyroMeasure(/* mode= */LN_MODE);
+//  startAccelMeasure(/* mode= */LN_MODE);
+	////////////FIFO使能////////////////
+	#ifdef USEFIFO
+	startFIFOMode();
+	#endif
+	
+	#ifdef TILTDETE	 //倾斜检测
+	// TILEDETE_INTNUM号中断 脉冲模式  高电平有效  推挽模式 
+	setINTMode(/*INTPin=*/TILEDETE_INTNUM, /*INTmode=*/0, /*INTPolarity=*/1, /*INTDriveCircuit=*/1);
+	tiltDetectionInit();	
+	setTiltDetection();
+	enableTILEInterrupt();	
+	#endif
+	
+
+	
+
+	#ifdef TAPDETE	 //敲击检测
+	// TAPDETE_INTNUM号中断 脉冲模式  高电平有效  推挽模式 
+	setINTMode(/*INTPin=*/TAPDETE_INTNUM, /*INTmode=*/0, /*INTPolarity=*/1, /*INTDriveCircuit=*/1);
+	tapDetectionInit(/* accelMode= */1);
+	#endif
+	
+	  
+	#ifdef SIGNMOVE  //显著运动检测
+	//1号中断 脉冲模式  高电平有效  推挽模式 
+	setINTMode(/*INTPin=*/SIGNMOVE_INTNUM, /*INTmode=*/0, /*INTPolarity=*/1, /*INTDriveCircuit=*/1);
+	wakeOnMotionInit();
+	setWOMTh(/*axis=*/ALL,/*threshold=*/98);
+	enableSMDInterrupt(/*mode=*/2);
+	#endif
+	
+	#ifdef WAKEMOVE  //运动唤醒检测
+	//1号中断 脉冲模式  高电平有效  推挽模式 
+	setINTMode(/*INTPin=*/WAKEMOVE_INTNUM, /*INTmode=*/0, /*INTPolarity=*/1, /*INTDriveCircuit=*/1);
+	wakeOnMotionInit();
+	setWOMTh(/*axis=*/ALL,/*threshold=*/98);
+	setWOMInterrupt(/* axis = */X_AXIS_WOM|Y_AXIS_WOM|Z_AXIS_WOM);
+	#endif	
+	
+	
+	
+	
+	printf("Init finsh ,start");
+		
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,6 +212,67 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	//IMU读取简单测试，不要和其它函数一起调用/////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	//samepleGetTest(ACCFloat,GYROFloat);
+	////////////获取FIFO数据////////////////
+	#ifdef USEFIFO
+		getFIFOData();
+	#endif
+
+		
+//  tempData=    getTemperature();
+//	ACCInt.X	= getInt16AccelDataX();
+//	ACCInt.Y	= getInt16AccelDataY();	
+//	ACCInt.Z	= getInt16AccelDataZ();
+//		
+//	GYROInt.X	= getInt16GyroDataX();
+//	GYROInt.Y	= getInt16GyroDataY();	
+//	GYROInt.Z	= getInt16GyroDataZ();	
+//								
+//	ACCFloat.X = ADchange(ACCInt.X,User_set._accelRange);
+//	ACCFloat.Y = ADchange(ACCInt.Y,User_set._accelRange);
+//	ACCFloat.Z = ADchange(ACCInt.Z,User_set._accelRange);
+//		
+//	GYROFloat.X= ADchange(GYROInt.X,User_set._gyroRange);
+//  GYROFloat.Y= ADchange(GYROInt.Y,User_set._gyroRange);
+//  GYROFloat.Z= ADchange(GYROInt.Z,User_set._gyroRange);
+	
+////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////
+	
+	#ifdef USEUPCOM
+	int16_t AllData[6];	
+	AllData[0]=ACCFloat.X;
+	AllData[1]=ACCFloat.Y;
+	AllData[2]=ACCFloat.Z;
+	AllData[3]=GYROFloat.X;	
+	AllData[4]=GYROFloat.Y;	
+	AllData[5]=GYROFloat.Z;	
+	SendToUpcomSensor(AllData,0);
+	#endif
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	//姿态解算////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////
+//	//送入IMU获取的 ACCInt,GYROInt
+//	Prepare_Data(ACCInt,GYROInt); 												//获取姿态解算所需数据
+//	
+//	IMUupdate(&Gyr_filt,&Acc_filt,&Att_Angle); 						//四元数姿态解算
+
+	#ifdef USEUPCOM
+	int16_t Eulervalue[3];	
+	Eulervalue[0]=Att_Angle.rol;
+	Eulervalue[1]=Att_Angle.pit;
+	Eulervalue[2]=Att_Angle.yaw;
+	SendToUpcomEuler(Eulervalue,3);
+	#endif
+	////////////////////////////////////////////////////////////////////////////////////////////
+	
+  HAL_Delay(2);
   }
   /* USER CODE END 3 */
 }
@@ -143,6 +316,82 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	uint8_t status;
+	#ifdef TILEDETE
+	if(GPIO_Pin== (0x0040 >>TILEDETE_INTNUM) )
+	 {
+		status= readInterruptStatus(/* reg= */ICM42688_INT_STATUS3);
+		 printf("status %x\r\n",status);
+    if(status & ICM42688_TILT_DET_INT){
+      printf("TILE HAPPEN \r\n");
+    }
+	 }
+	 printf("TILE \r\n");
+	 printf("\r\n");
+	#endif
+	 
+	 
+	#ifdef TAPDETE	
+  if(GPIO_Pin== (0x0040 >>TAPDETE_INTNUM) )
+  {
+		
+		uint32_t tapNum;
+		uint8_t tapAxis;
+    status= readInterruptStatus(/* reg= */ICM42688_INT_STATUS3);
+		printf("status %x\r\n",status);
+    if(status & ICM42688_TAP_DET_INT){
+      getTapInformation();  //Get tap information
+      tapNum = numberOfTap();  //Get the number of tap: single-tap TAP_SINGLE or double tap TAP_DOUBLE
+      tapAxis = axisOfTap();  //Get the axis on which tap occurred: X_AXIS, Y_AXIS or Z_AXIS
+      if(tapAxis == X_AXIS){
+        printf("X axis: ");
+      } else if(tapAxis == Y_AXIS){
+        printf("Y axis: ");
+      } else if(tapAxis == Z_AXIS){
+        printf("Z axis: ");
+      }
+      if(tapNum == TAP_SINGLE){
+        printf("Single\r\n");
+      } else if(tapNum == TAP_DOUBLE){
+        printf("Double\r\n");
+		
+      }
+    }
+	 }
+		#endif	 
+	 
+	 
+	#ifdef SIGNMOVE
+  if(GPIO_Pin== (0x0040 >>SIGNMOVE_INTNUM) )
+  {
+		status= readInterruptStatus(/*reg=*/ ICM42688_INT_STATUS2);
+    if(status & ICM42688_SMD_INT){
+      printf("SMD_INT\r\n");
+    }
+	 }
+	#endif
+	 	 
+	#ifdef WAKEMOVE
+	if(GPIO_Pin== (0x0040 >>WAKEMOVE_INTNUM) )
+	 {
+	 status= readInterruptStatus(/*reg=*/ ICM42688_INT_STATUS2);
+    if(status & ICM42688_WOM_X_INT){
+      printf("X_AXIS_WOM ");
+    }
+    if(status & ICM42688_WOM_Y_INT){
+      printf("Y_AXIS_WOM ");
+    }
+    if(status & ICM42688_WOM_Z_INT){
+     printf("Z_AXIS_WOM ");
+    }
+	 printf("\r\n");
+	 }
+
+	#endif
+}
+
 
 /* USER CODE END 4 */
 

@@ -7,8 +7,8 @@
 .\objects\stm32f10x_tim.o: E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
 .\objects\stm32f10x_tim.o: E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\stm32f10x_tim.o: E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include\system_stm32f10x.h
-.\objects\stm32f10x_tim.o: F:\Desktop\姿态解算理论及其应用课程资料_20220121\姿态解算理论及其应用课程资料_20220121\2_视频中使用的姿态解算源码_20220121\719FLY精简版_20220121\RTE\Device\STM32F103C8\stm32f10x_conf.h
-.\objects\stm32f10x_tim.o: F:\Desktop\姿态解算理论及其应用课程资料_20220121\姿态解算理论及其应用课程资料_20220121\2_视频中使用的姿态解算源码_20220121\719FLY精简版_20220121\RTE\RTE_Components.h
+.\objects\stm32f10x_tim.o: F:\0.Practice_Project\IMU\姿态解算\姿态解算理论及其应用课程资料_20220121\2_视频中使用的姿态解算源码_20220121\719FLY精简版_20220121\RTE\Device\STM32F103C8\stm32f10x_conf.h
+.\objects\stm32f10x_tim.o: F:\0.Practice_Project\IMU\姿态解算\姿态解算理论及其应用课程资料_20220121\2_视频中使用的姿态解算源码_20220121\719FLY精简版_20220121\RTE\RTE_Components.h
 .\objects\stm32f10x_tim.o: E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\StdPeriph_Driver\inc\stm32f10x_adc.h
 .\objects\stm32f10x_tim.o: E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include\stm32f10x.h
 .\objects\stm32f10x_tim.o: E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h
