@@ -303,6 +303,8 @@ int16_t getInt16AccelDataZ(void);
 int16_t getInt16GyroDataX(void);
 int16_t getInt16GyroDataY(void);
 int16_t getInt16GyroDataZ(void);
+
+void enableGETDATAInterrupt();
 /**
 *@author       JCLStill
 *@brief         Des
@@ -548,24 +550,24 @@ void startTempMeasure();
 */
 void setFIFODataMode();
 
-/**
-* @fn writeReg
-* @brief Write register function, design it as a virtual function, implemented by a derived class.
-* @param reg  Register address 8bits
-* @param pBuf Storage and buffer for data to be written
-* @param size Length of data to be written
-*/
-void writeReg(uint8_t reg, void* pBuf, size_t size) ;
+///**
+//* @fn writeReg
+//* @brief Write register function, design it as a virtual function, implemented by a derived class.
+//* @param reg  Register address 8bits
+//* @param pBuf Storage and buffer for data to be written
+//* @param size Length of data to be written
+//*/
+//void writeReg(uint8_t reg, void* pBuf, size_t size) ;
 
-/**
-* @fn readReg
-* @brief Read register function, design it as a virtual function, implemented by a derived class.
-* @param reg  Register address 8bits
-* @param pBuf Read data storage and buffer
-* @param size Read data length
-* @return return the read length, returning 0 means length reading failed
-*/
-uint8_t readReg(uint8_t reg, void* pBuf, size_t size) ;
+///**
+//* @fn readReg
+//* @brief Read register function, design it as a virtual function, implemented by a derived class.
+//* @param reg  Register address 8bits
+//* @param pBuf Read data storage and buffer
+//* @param size Read data length
+//* @return return the read length, returning 0 means length reading failed
+//*/
+//uint8_t readReg(uint8_t reg, void* pBuf, size_t size) ;
 
 
 /**

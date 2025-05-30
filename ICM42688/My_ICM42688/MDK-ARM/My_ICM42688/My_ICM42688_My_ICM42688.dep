@@ -1,9 +1,9 @@
 Dependencies for Project 'My_ICM42688', Target 'My_ICM42688': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x68351A58)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o my_icm42688\startup_stm32f103xb.o --depend my_icm42688\startup_stm32f103xb.d)
-F (.\ICM42688\icm42688.c)(0x6835D9E5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\icm42688.o --omf_browse my_icm42688\icm42688.crf --depend my_icm42688\icm42688.d)
-I (../Core/Inc/main.h)(0x68351A56)
+F (startup_stm32f103xb.s)(0x68392504)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o my_icm42688\startup_stm32f103xb.o --depend my_icm42688\startup_stm32f103xb.d)
+F (.\ICM42688\icm42688.c)(0x68391F2D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\icm42688.o --omf_browse my_icm42688\icm42688.crf --depend my_icm42688\icm42688.d)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -27,16 +27,17 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (ICM42688\icm42688.h)(0x6835D567)
+I (ICM42688\icm42688.h)(0x68391D8A)
 I (ICM42688\icm42688regdata.h)(0x6835D1DA)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
 F (.\SendToAanyUp\SendToAanyUp.c)(0x683410CF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\sendtoaanyup.o --omf_browse my_icm42688\sendtoaanyup.crf --depend my_icm42688\sendtoaanyup.d)
 I (SendToAanyUp\SendToAanyUp.h)(0x68340FF8)
-I (../Core/Inc/main.h)(0x68351A56)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -60,15 +61,16 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
-I (../Core/Inc/usart.h)(0x68351A56)
-F (.\SendToAanyUp\PoseCalc.c)(0x683422CF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\posecalc.o --omf_browse my_icm42688\posecalc.crf --depend my_icm42688\posecalc.d)
+I (../Core/Inc/usart.h)(0x68392502)
+F (.\SendToAanyUp\PoseCalc.c)(0x6837CE0E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\posecalc.o --omf_browse my_icm42688\posecalc.crf --depend my_icm42688\posecalc.d)
 I (SendToAanyUp\PoseCalc.h)(0x683422C3)
-I (../Core/Inc/main.h)(0x68351A56)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -92,9 +94,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (./ICM42688/icm42688.h)(0x6835D567)
+I (./ICM42688/icm42688.h)(0x68391D8A)
 I (./ICM42688/icm42688regdata.h)(0x6835D1DA)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x669279A2)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
@@ -102,10 +105,10 @@ I (SendToAanyUp\SendToAanyUp.h)(0x68340FF8)
 I (./ICM42688/kalman_oneorder.h)(0x68303343)
 F (.\ICM42688\kalman_oneorder.c)(0x683413E9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\kalman_oneorder.o --omf_browse my_icm42688\kalman_oneorder.crf --depend my_icm42688\kalman_oneorder.d)
 I (ICM42688\kalman_oneorder.h)(0x68303343)
-F (../Core/Src/main.c)(0x6835DAAB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\main.o --omf_browse my_icm42688\main.crf --depend my_icm42688\main.d)
-I (../Core/Inc/main.h)(0x68351A56)
+F (../Core/Src/main.c)(0x6839266A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\main.o --omf_browse my_icm42688\main.crf --depend my_icm42688\main.d)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -129,22 +132,24 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Core/Inc/i2c.h)(0x68351A56)
-I (../Core/Inc/usart.h)(0x68351A56)
+I (../Core/Inc/i2c.h)(0x68392502)
+I (../Core/Inc/spi.h)(0x68392502)
+I (../Core/Inc/usart.h)(0x68392502)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
-I (../Core/Inc/gpio.h)(0x68351A56)
-I (./ICM42688/function.h)(0x6835DA00)
-I (./ICM42688/icm42688.h)(0x6835D567)
+I (../Core/Inc/gpio.h)(0x68392502)
+I (./ICM42688/function.h)(0x6839264E)
+I (./ICM42688/icm42688.h)(0x68391D8A)
 I (./ICM42688/icm42688regdata.h)(0x6835D1DA)
 I (./SendToAanyUp/SendToAanyUp.h)(0x68340FF8)
 I (./SendToAanyUp/PoseCalc.h)(0x683422C3)
-F (../Core/Src/gpio.c)(0x68351A56)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\gpio.o --omf_browse my_icm42688\gpio.crf --depend my_icm42688\gpio.d)
-I (../Core/Inc/gpio.h)(0x68351A56)
-I (../Core/Inc/main.h)(0x68351A56)
+F (../Core/Src/gpio.c)(0x68392502)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\gpio.o --omf_browse my_icm42688\gpio.crf --depend my_icm42688\gpio.d)
+I (../Core/Inc/gpio.h)(0x68392502)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -168,13 +173,14 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-F (../Core/Src/i2c.c)(0x68351A56)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\i2c.o --omf_browse my_icm42688\i2c.crf --depend my_icm42688\i2c.d)
-I (../Core/Inc/i2c.h)(0x68351A56)
-I (../Core/Inc/main.h)(0x68351A56)
+F (../Core/Src/i2c.c)(0x68392502)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\i2c.o --omf_browse my_icm42688\i2c.crf --depend my_icm42688\i2c.d)
+I (../Core/Inc/i2c.h)(0x68392502)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -198,13 +204,14 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-F (../Core/Src/usart.c)(0x68351A56)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\usart.o --omf_browse my_icm42688\usart.crf --depend my_icm42688\usart.d)
-I (../Core/Inc/usart.h)(0x68351A56)
-I (../Core/Inc/main.h)(0x68351A56)
+F (../Core/Src/spi.c)(0x68392502)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\spi.o --omf_browse my_icm42688\spi.crf --depend my_icm42688\spi.d)
+I (../Core/Inc/spi.h)(0x68392502)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -228,13 +235,45 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
+F (../Core/Src/usart.c)(0x68392502)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\usart.o --omf_browse my_icm42688\usart.crf --depend my_icm42688\usart.d)
+I (../Core/Inc/usart.h)(0x68392502)
+I (../Core/Inc/main.h)(0x68392502)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6690D0C7)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x6690D0A5)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6690D0A5)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6690D0A5)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6690D0A5)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6690D0C7)
+I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
-F (../Core/Src/stm32f1xx_it.c)(0x68351A56)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_it.o --omf_browse my_icm42688\stm32f1xx_it.crf --depend my_icm42688\stm32f1xx_it.d)
-I (../Core/Inc/main.h)(0x68351A56)
+F (../Core/Src/stm32f1xx_it.c)(0x68392502)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_it.o --omf_browse my_icm42688\stm32f1xx_it.crf --depend my_icm42688\stm32f1xx_it.d)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -258,14 +297,15 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Core/Inc/stm32f1xx_it.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_it.h)(0x68392502)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
-F (../Core/Src/stm32f1xx_hal_msp.c)(0x68351A56)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_msp.o --omf_browse my_icm42688\stm32f1xx_hal_msp.crf --depend my_icm42688\stm32f1xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x68351A56)
+F (../Core/Src/stm32f1xx_hal_msp.c)(0x68392502)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_msp.o --omf_browse my_icm42688\stm32f1xx_hal_msp.crf --depend my_icm42688\stm32f1xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -289,11 +329,12 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_gpio_ex.o --omf_browse my_icm42688\stm32f1xx_hal_gpio_ex.crf --depend my_icm42688\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -317,10 +358,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_i2c.o --omf_browse my_icm42688\stm32f1xx_hal_i2c.crf --depend my_icm42688\stm32f1xx_hal_i2c.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -344,10 +386,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal.o --omf_browse my_icm42688\stm32f1xx_hal.crf --depend my_icm42688\stm32f1xx_hal.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -371,10 +414,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_rcc.o --omf_browse my_icm42688\stm32f1xx_hal_rcc.crf --depend my_icm42688\stm32f1xx_hal_rcc.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -398,10 +442,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_rcc_ex.o --omf_browse my_icm42688\stm32f1xx_hal_rcc_ex.crf --depend my_icm42688\stm32f1xx_hal_rcc_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -425,10 +470,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_gpio.o --omf_browse my_icm42688\stm32f1xx_hal_gpio.crf --depend my_icm42688\stm32f1xx_hal_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -452,10 +498,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_dma.o --omf_browse my_icm42688\stm32f1xx_hal_dma.crf --depend my_icm42688\stm32f1xx_hal_dma.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -479,10 +526,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_cortex.o --omf_browse my_icm42688\stm32f1xx_hal_cortex.crf --depend my_icm42688\stm32f1xx_hal_cortex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -506,10 +554,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_pwr.o --omf_browse my_icm42688\stm32f1xx_hal_pwr.crf --depend my_icm42688\stm32f1xx_hal_pwr.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -533,10 +582,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_flash.o --omf_browse my_icm42688\stm32f1xx_hal_flash.crf --depend my_icm42688\stm32f1xx_hal_flash.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -560,10 +610,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_flash_ex.o --omf_browse my_icm42688\stm32f1xx_hal_flash_ex.crf --depend my_icm42688\stm32f1xx_hal_flash_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -587,10 +638,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_exti.o --omf_browse my_icm42688\stm32f1xx_hal_exti.crf --depend my_icm42688\stm32f1xx_hal_exti.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -614,10 +666,39 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
+F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_spi.o --omf_browse my_icm42688\stm32f1xx_hal_spi.crf --depend my_icm42688\stm32f1xx_hal_spi.d)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6690D0C7)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x6690D0A5)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6690D0A5)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6690D0A5)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6690D0A5)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6690D0C7)
+I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_tim.o --omf_browse my_icm42688\stm32f1xx_hal_tim.crf --depend my_icm42688\stm32f1xx_hal_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -641,10 +722,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_tim_ex.o --omf_browse my_icm42688\stm32f1xx_hal_tim_ex.crf --depend my_icm42688\stm32f1xx_hal_tim_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -668,10 +750,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\stm32f1xx_hal_uart.o --omf_browse my_icm42688\stm32f1xx_hal_uart.crf --depend my_icm42688\stm32f1xx_hal_uart.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -695,6 +778,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)
 F (../Core/Src/system_stm32f1xx.c)(0x6690D0C7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ./ICM42688 -I ./SendToAanyUp-I F:\0.Practice_Project\IMU\ICM42688\My_ICM42688\MDK-ARM\RTE-I E:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-I E:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o my_icm42688\system_stm32f1xx.o --omf_browse my_icm42688\system_stm32f1xx.crf --depend my_icm42688\system_stm32f1xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6690D0C7)
@@ -706,7 +790,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6690D0A5)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6690D0A5)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6690D0C7)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68351A56)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x68392502)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6690D0C7)
@@ -722,4 +806,5 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6690D0C7)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6690D0C7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6690D0C7)

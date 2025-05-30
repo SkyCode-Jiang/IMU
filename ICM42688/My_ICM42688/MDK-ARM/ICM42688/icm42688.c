@@ -5,34 +5,20 @@
 
 ICM42688Set User_set;
 
-extern I2C_HandleTypeDef hi2c1;
-void writeReg(uint8_t reg, void* pBuf, size_t size)
- {
-	 HAL_I2C_Mem_Write(&hi2c1,ICM42688_I2C_WRITE_ADDR ,reg, I2C_MEMADD_SIZE_8BIT,pBuf,  size, 0xFFFF);
- }
-
-
-uint8_t readReg(uint8_t reg, void* pBuf, size_t size)
-{
-	HAL_StatusTypeDef stuats;
-	stuats = HAL_I2C_Mem_Read(&hi2c1, ICM42688_I2C_READ_ADDR, reg, I2C_MEMADD_SIZE_8BIT, pBuf, size, 0xFFFF);
-	return stuats;
-}
+extern void writeReg(uint8_t reg, void* pBuf, size_t size) ;
+extern uint8_t readReg(uint8_t reg, void* pBuf, size_t size) ;
 
 
 //读取Who_am_i寄存器
 int ICM42688_Readme(void)
 {
+	uint8_t id=0;
   uint8_t bank = 0;
   writeReg(ICM42688_REG_BANK_SEL,&bank,1);
-	uint8_t id=0;
+	
 	readReg(ICM42688_WHO_AM_I,&id,1);
-
+	printf("\r\n  %x \r\n",id);
  
-  if(readReg(ICM42688_WHO_AM_I,&id,1) != 0){
-    return HAL_ERROR;
-  }
-
   if(id != DFRobot_ICM42688_ID){
     return ERR_IC_VERSION;
   }
@@ -142,6 +128,7 @@ void startAccelMeasure(uint8_t mode)
   HAL_Delay(10);
 }
 
+FLOAT_XYZ PrintACCFloat,PrintACCFloatGYROFloat;
 
 //获取温度 并转换
 float getTemperature(void)
@@ -345,27 +332,27 @@ float getGyroDataZ(void)
   return value*User_set._gyroRange;
 }
 
-void samepleGetTest(FLOAT_XYZ ACCFloat,FLOAT_XYZ GRYOFloat)
+void samepleGetTest(FLOAT_XYZ ACCFloat,FLOAT_XYZ GYROFloat)
 {	
 	//getInt16AccelDataX、getAccelDataX重复读取	
 	float temp = getTemperature();
   ACCFloat.X = getAccelDataX();
   ACCFloat.Y = getAccelDataY();
   ACCFloat.Z = getAccelDataZ();
-  GRYOFloat.X= getGyroDataX();
-  GRYOFloat.Y= getGyroDataY();
-  GRYOFloat.Z= getGyroDataZ();		
+  GYROFloat.X= getGyroDataX();
+  GYROFloat.Y= getGyroDataY();
+  GYROFloat.Z= getGyroDataZ();		
   printf("Temperature: %f C",temp);
   printf("\r\n");
 
   printf("Accel_X: %f mg ",ACCFloat.X);
-	printf("    Accel_Y: %f mg",ACCFloat.Y);
+	printf("    Accel_Y: %f mg",ACCFloat.Y); 
   printf("    Accel_Z: %f mg",ACCFloat.Z);
   printf("\r\n");
 		
-  printf("Gyro_X:  %f dps ",GRYOFloat.X);
-	printf("    Gyro_y:  %f dps ",GRYOFloat.Y);
-	printf("    Gyro_Z:  %f dps",GRYOFloat.Z);
+  printf("Gyro_X:  %f dps ",GYROFloat.X);
+	printf("    Gyro_y:  %f dps ",GYROFloat.Y);
+	printf("    Gyro_Z:  %f dps",GYROFloat.Z);
   printf("\r\n");
 }
 
@@ -442,8 +429,6 @@ void setINTMode(uint8_t INTPin,uint8_t INTmode,uint8_t INTPolarity,uint8_t INTDr
 
 
 
-
-
 uint8_t readInterruptStatus(uint8_t reg)
 {
   uint8_t bank = 0;
@@ -452,6 +437,29 @@ uint8_t readInterruptStatus(uint8_t reg)
   readReg(reg,&status,1);
   return status;
 }
+
+
+void enableGETDATAInterrupt()
+{
+	uint8_t bank = 0;
+  writeReg(ICM42688_REG_BANK_SEL,&bank,1);
+  uint8_t INT = 1<<3 ;
+	if(User_set._INTPin == 1){
+		writeReg(ICM42688_INT_SOURCE0,&INT,1);
+	} else {
+		writeReg(ICM42688_INT_SOURCE3,&INT,1);
+	}
+  HAL_Delay(50);
+	INT = 0X20;
+	writeReg(ICM42688_INT_CONFIG0,&INT,1);
+	
+	 HAL_Delay(50);
+	bank = 0;
+  writeReg(ICM42688_REG_BANK_SEL,&bank,1);
+  User_set.APEXConfig0.tiltEnable = 1;
+  writeReg(ICM42688_APEX_CONFIG0,&User_set.APEXConfig0,1);	
+}
+
 void tapDetectionInit(uint8_t accelMode)
 {
   uint8_t bank = 0;

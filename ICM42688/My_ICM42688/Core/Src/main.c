@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -58,6 +59,8 @@ float tempData;
 
 FLOAT_ANGLE Att_Angle;                                 //欧拉角
 FLOAT_XYZ 	Acc_filt,Acc_filtold,Gyr_radold,Gyr_filt;	  //滤波后的数据
+
+uint8_t GETDATAFLAG =0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -69,13 +72,97 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 ///////////根据设备不同改写//////////////////
+///////writeReg///////////MCU////////////////
+///////readReg////////////MCU////////////////
 ///////SendToUp///////////MCU////////////////
 ///////ADChangeACC////////IMU////////////////
 ///////ADChangeGYRO///////IMU////////////////
 /////////////////////////////////////////////
+
+extern I2C_HandleTypeDef hi2c1;
+extern SPI_HandleTypeDef hspi1;
+uint8_t SPI_ReadWriteByte(uint8_t TxData)
+{
+	uint8_t Rxdata;
+	HAL_SPI_TransmitReceive(&hspi1, &TxData, &Rxdata, 1, 1000);       
+ 	return Rxdata;          		    
+}
+
+void SPI_Read(uint8_t* pBuffer, uint8_t ReadAddr, uint16_t NumByteToRead)   
+{ 
+	uint16_t i; 
+	
+	HAL_GPIO_WritePin(ICM_CS_GPIO_Port,ICM_CS_Pin,GPIO_PIN_RESET);  
+	SPI_ReadWriteByte((uint8_t)ReadAddr);   
+	for (i = 0; i < NumByteToRead; i++)
+	{ 
+		pBuffer[i]=SPI_ReadWriteByte(0XFF);    
+	}	
+	HAL_GPIO_WritePin(ICM_CS_GPIO_Port,ICM_CS_Pin,GPIO_PIN_SET); 
+} 
+
+
+void SPI_Write (uint8_t* pBuffer, uint8_t WriteAddr, uint16_t NumByteToWrite)
+{
+ 	uint16_t i; 
+ 
+    HAL_GPIO_WritePin(ICM_CS_GPIO_Port,ICM_CS_Pin,GPIO_PIN_RESET);   
+   SPI_ReadWriteByte((uint8_t)WriteAddr);   
+    for (i = 0; i < NumByteToWrite; i++)
+	{
+		SPI_ReadWriteByte(pBuffer[i]);
+	}
+	
+	HAL_GPIO_WritePin(ICM_CS_GPIO_Port,ICM_CS_Pin,GPIO_PIN_SET); 
+}
+
+
+
+void writeReg(uint8_t reg, void* pBuf, size_t size)
+ { 
+	 #ifdef  IIC_USE
+	 
+		HAL_I2C_Mem_Write(&hi2c1,ICM42688_I2C_WRITE_ADDR ,reg, I2C_MEMADD_SIZE_8BIT,pBuf,  size, 0xFFFF);
+	 
+	 #endif
+	 
+	#ifdef  SPI_USE
+	 
+	 SPI_Write(pBuf,reg&0x7F,size);
+	
+	 #endif
+	
+ }
+
+
+uint8_t readReg(uint8_t reg, void* pBuf, size_t size)
+{
+	
+	#ifdef  IIC_USE
+	
+	HAL_StatusTypeDef stuats;
+	stuats = HAL_I2C_Mem_Read(&hi2c1, ICM42688_I2C_READ_ADDR, reg, I2C_MEMADD_SIZE_8BIT, pBuf, size, 0xFFFF);
+	return stuats;	
+	
+	#endif
+	
+	#ifdef  SPI_USE	
+		 
+	SPI_Read(pBuf,reg|0x80,size);
+////////////////////////////////////////test	
+//		HAL_GPIO_WritePin(ICM_CS_GPIO_Port,ICM_CS_Pin,GPIO_PIN_RESET); 
+//		uint8_t reg2 = (reg | 0x80);
+//		HAL_SPI_Transmit( &hspi1, &reg2, 1,  0xFFFF);
+//		HAL_SPI_Receive(&hspi1, pBuf, size, 0xffff);
+//		HAL_GPIO_WritePin(ICM_CS_GPIO_Port,ICM_CS_Pin,GPIO_PIN_SET); 
+	#endif
+
+}
+
+
 /**
   *@author       JCLStill
-  *@brief        SendToAanyUp 部通信函数，根据不同设备改写
+  *@brief        SendToAanyUp 通信函数，根据不同设备改写
   *@param         void
   *@return        void
   */
@@ -140,6 +227,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_I2C1_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 	printf("Start init\r\n");
 	
@@ -150,19 +238,37 @@ int main(void)
 		printf("SomeThings error \r\n");
 		return HAL_ERROR;
 	}
+	bool ret = true;
+//  uint8_t bank = 0;
+//	uint8_t value_ = 0x01;
+//  writeReg(ICM42688_REG_BANK_SEL,&bank,1);
+//	writeReg(ICM42688_DEVICE_CONFIG,&value_,1);
+//	HAL_Delay(5);
+//	value_ = 0x27;
+//	writeReg(ICM42688_DRIVE_CONFIG,&value_,1);
+	
+	//SPI 设置 DEVICE_CONFIG DRIVE_CONFIG  INTF_CONFIG4
+	
 	
 	////////////ACC GYRO 初始化//////////////////////////////		
 	////////////如果使用APEX APEX会重新初始化某些位///////////////	
-//	setODRAndFSR(/* who= */GYRO,/* ODR= */ODR_1KHZ, /* FSR = */FSR_0);
-//  setODRAndFSR(/* who= */ACCEL,/* ODR= */ODR_1KHZ, /* FSR = */FSR_0);
-//	
-//	startTempMeasure();
-//  startGyroMeasure(/* mode= */LN_MODE);
-//  startAccelMeasure(/* mode= */LN_MODE);
+	setODRAndFSR(/* who= */GYRO,/* ODR= */ODR_1KHZ, /* FSR = */FSR_0);
+  setODRAndFSR(/* who= */ACCEL,/* ODR= */ODR_1KHZ, /* FSR = */FSR_0);
+	
+	startTempMeasure();
+  startGyroMeasure(/* mode= */LN_MODE);
+  startAccelMeasure(/* mode= */LN_MODE);
 	////////////FIFO使能////////////////
 	#ifdef USEFIFO
 	startFIFOMode();
 	#endif
+	
+	#ifdef INTGET
+// INTGET_INTNUM号中断 脉冲模式  高电平有效  推挽模式 
+	setINTMode(/*INTPin=*/INTGET_INTNUM, /*INTmode=*/0, /*INTPolarity=*/1, /*INTDriveCircuit=*/1);
+  enableGETDATAInterrupt();
+	#endif
+	
 	
 	#ifdef TILTDETE	 //倾斜检测
 	// TILEDETE_INTNUM号中断 脉冲模式  高电平有效  推挽模式 
@@ -172,9 +278,7 @@ int main(void)
 	enableTILEInterrupt();	
 	#endif
 	
-
 	
-
 	#ifdef TAPDETE	 //敲击检测
 	// TAPDETE_INTNUM号中断 脉冲模式  高电平有效  推挽模式 
 	setINTMode(/*INTPin=*/TAPDETE_INTNUM, /*INTmode=*/0, /*INTPolarity=*/1, /*INTDriveCircuit=*/1);
@@ -208,7 +312,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
+  {		
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -218,28 +322,49 @@ int main(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////
 	//samepleGetTest(ACCFloat,GYROFloat);
 	////////////获取FIFO数据////////////////
+	#ifdef INTGET
+		if(GETDATAFLAG == 1)
+		{
+			GETDATAFLAG = 0 ;
+	#endif
+		
+		
 	#ifdef USEFIFO
 		getFIFOData();
-	#endif
-
-		
-//  tempData=    getTemperature();
-//	ACCInt.X	= getInt16AccelDataX();
-//	ACCInt.Y	= getInt16AccelDataY();	
-//	ACCInt.Z	= getInt16AccelDataZ();
-//		
-//	GYROInt.X	= getInt16GyroDataX();
-//	GYROInt.Y	= getInt16GyroDataY();	
-//	GYROInt.Z	= getInt16GyroDataZ();	
-//								
-//	ACCFloat.X = ADchange(ACCInt.X,User_set._accelRange);
-//	ACCFloat.Y = ADchange(ACCInt.Y,User_set._accelRange);
-//	ACCFloat.Z = ADchange(ACCInt.Z,User_set._accelRange);
-//		
-//	GYROFloat.X= ADchange(GYROInt.X,User_set._gyroRange);
-//  GYROFloat.Y= ADchange(GYROInt.Y,User_set._gyroRange);
-//  GYROFloat.Z= ADchange(GYROInt.Z,User_set._gyroRange);
+	#endif		
 	
+	tempData=    getTemperature();
+	ACCInt.X	= getInt16AccelDataX();
+	ACCInt.Y	= getInt16AccelDataY();	
+	ACCInt.Z	= getInt16AccelDataZ();
+		
+	GYROInt.X	= getInt16GyroDataX();
+	GYROInt.Y	= getInt16GyroDataY();	
+	GYROInt.Z	= getInt16GyroDataZ();	
+	
+  ACCFloat.X = ADchange(ACCInt.X,User_set._accelRange);
+	ACCFloat.Y = ADchange(ACCInt.Y,User_set._accelRange);
+	ACCFloat.Z = ADchange(ACCInt.Z,User_set._accelRange);
+		
+	GYROFloat.X= ADchange(GYROInt.X,User_set._gyroRange);
+  GYROFloat.Y= ADchange(GYROInt.Y,User_set._gyroRange);
+  GYROFloat.Z= ADchange(GYROInt.Z,User_set._gyroRange);						
+
+	#ifdef COMPRINTF_FLOAT
+	printf("Temperature: %.2f C",tempData);
+  printf("\r\n");
+
+  printf("Accel_X: %.2f mg ",ACCFloat.X);
+	printf("   Accel_Y: %.2f mg",ACCFloat.Y);
+  printf("    Accel_Z: %.2f mg",ACCFloat.Z);
+  printf("\r\n");
+		
+  printf("Gyro_X:  %.2f dps ",GYROFloat.X);
+	printf("    Gyro_y:  %.2f dps ",GYROFloat.Y);
+	printf("    Gyro_Z:  %.2f dps",GYROFloat.Z);
+  printf("\r\n");	
+	#endif
+		
 ////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////
@@ -258,10 +383,11 @@ int main(void)
 	//////////////////////////////////////////////////////////////////////////////////////////////
 	//姿态解算////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////
-//	//送入IMU获取的 ACCInt,GYROInt
-//	Prepare_Data(ACCInt,GYROInt); 												//获取姿态解算所需数据
-//	
-//	IMUupdate(&Gyr_filt,&Acc_filt,&Att_Angle); 						//四元数姿态解算
+	//送入IMU获取的 ACCInt,GYROInt
+	#ifdef POSEEN
+	Prepare_Data(ACCInt,GYROInt); 												//获取姿态解算所需数据	
+	IMUupdate(&Gyr_filt,&Acc_filt,&Att_Angle); 						//四元数姿态解算
+	#endif
 
 	#ifdef USEUPCOM
 	int16_t Eulervalue[3];	
@@ -271,9 +397,15 @@ int main(void)
 	SendToUpcomEuler(Eulervalue,3);
 	#endif
 	////////////////////////////////////////////////////////////////////////////////////////////
+	#ifdef POLLGET
+		HAL_Delay(1);
+	#endif
 	
-  HAL_Delay(2);
-  }
+	#ifdef INTGET	
+		}
+	#endif
+	}
+
   /* USER CODE END 3 */
 }
 
@@ -319,6 +451,12 @@ void SystemClock_Config(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	uint8_t status;
+	#ifdef INTGET
+		GETDATAFLAG = 1;
+	status= readInterruptStatus(/* reg= */ICM42688_INT_STATUS);
+	#endif
+
+	
 	#ifdef TILEDETE
 	if(GPIO_Pin== (0x0040 >>TILEDETE_INTNUM) )
 	 {
@@ -335,12 +473,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	 
 	#ifdef TAPDETE	
   if(GPIO_Pin== (0x0040 >>TAPDETE_INTNUM) )
-  {
-		
+  {		
 		uint32_t tapNum;
 		uint8_t tapAxis;
     status= readInterruptStatus(/* reg= */ICM42688_INT_STATUS3);
-		printf("status %x\r\n",status);
+//		printf("status %x\r\n",status);
     if(status & ICM42688_TAP_DET_INT){
       getTapInformation();  //Get tap information
       tapNum = numberOfTap();  //Get the number of tap: single-tap TAP_SINGLE or double tap TAP_DOUBLE
@@ -359,6 +496,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		
       }
     }
+
 	 }
 		#endif	 
 	 

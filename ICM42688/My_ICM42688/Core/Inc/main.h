@@ -58,6 +58,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ICM_CS_Pin GPIO_PIN_4
+#define ICM_CS_GPIO_Port GPIOA
 #define ICM_INT2_Pin GPIO_PIN_4
 #define ICM_INT2_GPIO_Port GPIOB
 #define ICM_INT2_EXTI_IRQn EXTI4_IRQn

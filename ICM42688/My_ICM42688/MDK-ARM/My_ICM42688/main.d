@@ -26,9 +26,11 @@ my_icm42688\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 my_icm42688\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 my_icm42688\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 my_icm42688\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+my_icm42688\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 my_icm42688\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 my_icm42688\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 my_icm42688\main.o: ../Core/Inc/i2c.h
+my_icm42688\main.o: ../Core/Inc/spi.h
 my_icm42688\main.o: ../Core/Inc/usart.h
 my_icm42688\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 my_icm42688\main.o: ../Core/Inc/gpio.h

@@ -331,7 +331,7 @@
               <MiscControls/>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine/>
-              <IncludePath>../Core/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc;   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;   ../Drivers/CMSIS/Include;   ./ICM42688;   ./SendToAanyUp</IncludePath>
+              <IncludePath>../Core/Inc;                  ../Drivers/STM32F1xx_HAL_Driver/Inc;                  ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;                  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;                  ../Drivers/CMSIS/Include;                  ./ICM42688;                  ./SendToAanyUp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -420,6 +420,11 @@
               <FilePath>../Core/Src/i2c.c</FilePath>
             </File>
             <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/spi.c</FilePath>
+            </File>
+            <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/usart.c</FilePath>
@@ -498,6 +503,11 @@
               <FileName>stm32f1xx_hal_exti.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f1xx_hal_tim.c</FileName>
