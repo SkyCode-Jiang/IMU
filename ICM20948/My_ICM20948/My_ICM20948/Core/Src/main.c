@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "icm20948.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,7 +67,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	uint8_t res = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -92,9 +92,17 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	printf("start init1\r\n");
   /* USER CODE END 2 */
+	 uint8_t addr = 0;
+//chooseIMUChannel(0x01);
+ HAL_I2C_Mem_Read(&hi2c1, (0X68 << 1 | 0x01), 0x00, 1, &addr, 1, 10);
 
+    HAL_I2C_Mem_Read(&hi2c1, (0X68 << 1 | 0x01), 0x00, 1, &addr, 1, 10);
+    printf("addr ID %x\r\n", addr);
+    addr = 0;
+
+  printf("%x\r\n", res);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
